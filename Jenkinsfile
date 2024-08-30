@@ -16,12 +16,19 @@ pipeline {
                 echo 'unit tests...'
                 echo "integration tests....."
             }
-            post{
-                success{
+            post {
+                success {
                     emailext(
                         to: "huong.nguyenlinh96@gmail.com",
                         subject:"Unit and Intergration test email",
                         body: "Test Succeeded"
+                    )
+                }
+                failure {
+                    emailext(
+                        to: "huong.nguyenlinh96@gmail.com",
+                        subject:"Unit and Intergration test email",
+                        body: "Test Failed"
                     )
                 }
             }
