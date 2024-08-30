@@ -19,8 +19,8 @@ pipeline {
             post{
                 success{
                     emailext{
-                        mail to: "s223867709@deakin.edu.au"
-                        subject:"Unit and Intergration test email"
+                        to: "s223867709@deakin.edu.au",
+                        subject:"Unit and Intergration test email",
                         body: "Test Succeeded"
                     }
                 }
@@ -38,8 +38,8 @@ pipeline {
             post{
                 success{
                     emailext{
-                        mail to: "s223867709@deakin.edu.au"
-                        subject:"Security Scan email"
+                        to: "s223867709@deakin.edu.au",
+                        subject:"Security Scan email",
                         body: "Scan Succeeded"
                     }   
                 }
