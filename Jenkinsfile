@@ -37,11 +37,11 @@ pipeline {
             }
             post{
                 success{
-                    emailext
+                    emailext(
                         to: "huong.nguyenlinh96@gmail.com",
                         subject:"Security Scan email",
                         body: "Scan Succeeded"
-                       
+                    )   
                 }
             }
         }
