@@ -18,9 +18,11 @@ pipeline {
             }
             post{
                 success{
-                    mail to: "s223867709@deakin.edu.au"
-                    subject:"Unit and Intergration test email"
-                    body: "Test Succeeded"
+                    emailext{
+                        mail to: "s223867709@deakin.edu.au"
+                        subject:"Unit and Intergration test email"
+                        body: "Test Succeeded"
+                    }
                 }
             }
         }
@@ -35,9 +37,11 @@ pipeline {
             }
             post{
                 success{
-                    mail to: "s223867709@deakin.edu.au"
-                    subject:"Security Scan email"
-                    body: "Scan Succeeded"
+                    emailext{
+                        mail to: "s223867709@deakin.edu.au"
+                        subject:"Security Scan email"
+                        body: "Scan Succeeded"
+                    }   
                 }
             }
         }
