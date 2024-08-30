@@ -17,22 +17,12 @@ pipeline {
                 echo "integration tests....."
             }
             post {
-                success {
-                    emailext(
-                        attachLog: true,
-                        to: "huong.nguyenlinh96@gmail.com",
+                always {
+                    mail to: "huong.nguyenlinh96@gmail.com",
                         subject:"Unit and Intergration test email",
                         body: "Test Succeeded"
-                    )
                 }
-                failure {
-                    emailext(
-                        attachLog: true,
-                        to: "huong.nguyenlinh96@gmail.com",
-                        subject:"Unit and Intergration test email",
-                        body: "Test Failed"
-                    )
-                }
+
             }
         }
         stage('Code Analysis') {
@@ -45,13 +35,12 @@ pipeline {
                 echo 'conduct security scan'
             }
             post{
-                success{
-                    emailext(
-                        attachLog: true,
-                        to: "huong.nguyenlinh96@gmail.com",
+                always {
+                    mail to: "huong.nguyenlinh96@gmail.com",
                         subject:"Security Scan email",
                         body: "Scan Succeeded"
-                    )   
+                }
+   
                 }
             }
         }
