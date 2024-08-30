@@ -47,7 +47,7 @@ pipeline {
         }
         stage('Deploy to Staging') {
             steps {
-                echo 'deploy the application to staging environment'
+                echo 'deploy the application to staging environment!!'
             }
         }
         stage('Intergration test on Staging') {
