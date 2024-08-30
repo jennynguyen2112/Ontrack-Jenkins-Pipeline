@@ -41,7 +41,7 @@ pipeline {
                         body: "Scan Succeeded"
                 }
    
-                }
+                
             }
         }
         stage('Deploy to Staging') {
