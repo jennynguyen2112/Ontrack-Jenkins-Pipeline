@@ -19,7 +19,7 @@ pipeline {
             post{
                 success{
                     emailext(
-                        to: "huong.nguyenlinh96@gmail.com",
+                        to: "bongyeuqua@yahoo.com",
                         subject:"Unit and Intergration test email",
                         body: "Test Succeeded"
                     )
@@ -38,7 +38,7 @@ pipeline {
             post{
                 success{
                     emailext(
-                        to: "huong.nguyenlinh96@gmail.com",
+                        to: "bongyeuqua@yahoo.com",
                         subject:"Security Scan email",
                         body: "Scan Succeeded"
                     )   
