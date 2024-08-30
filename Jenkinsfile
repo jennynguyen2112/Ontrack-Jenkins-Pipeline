@@ -19,6 +19,7 @@ pipeline {
             post {
                 success {
                     mail to: "huong.nguyenlinh96@gmail.com",
+                        attachLog: true,
                         subject:"Unit and Intergration test email",
                         body: "Test Succeeded"
                 }
@@ -37,6 +38,7 @@ pipeline {
             post{
                 success {
                     mail to: "huong.nguyenlinh96@gmail.com",
+                        attachLog: true,
                         subject:"Security Scan email",
                         body: "Scan Succeeded"
                 }
