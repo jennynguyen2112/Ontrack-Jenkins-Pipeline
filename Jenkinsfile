@@ -16,6 +16,13 @@ pipeline {
                 echo 'unit tests'
                 echo "integration tests"
             }
+            post{
+                success{
+                    mail to: "s223867709@deakin.edu.au"
+                    subject:"Unit and Intergration test email"
+                    body: "Test Succeeded"
+                }
+            }
         }
         stage('Code Analysis') {
             steps {
@@ -25,6 +32,13 @@ pipeline {
          stage('Security Scan') {
             steps {
                 echo 'conduct security scan'
+            }
+            post{
+                success{
+                    mail to: "s223867709@deakin.edu.au"
+                    subject:"Security Scan email"
+                    body: "Scan Succeeded"
+                }
             }
         }
         stage('Deploy to Staging') {
