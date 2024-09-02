@@ -20,7 +20,7 @@ pipeline {
                 always {
                     emailext(
                         to: "huong.nguyenlinh96@gmail.com",
-                        subject:"Unit and Intergration test email",
+                        subject:"Unit and Intergration test email 2",
                         body: "Test Succeeded",
                         attachLog: true
                       )
@@ -41,7 +41,7 @@ pipeline {
                 always {
                     emailext(
                         to: "huong.nguyenlinh96@gmail.com",
-                        subject:"Security Scan email",
+                        subject:"Security Scan email 2",
                         body: "Scan Succeeded",
                         attachLog: true
                     )    
